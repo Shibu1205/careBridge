@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareBridge - Helping the Elderly</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <h1>CareBridge</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#volunteers">Volunteers</a></li>
+            <li><a id="contact" href="#contact" >Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="istockphoto-474775374-612x612.jpg" alt="Elderly Care" class="hero-img">
+        <h1>Connecting Volunteers with the Elderly</h1>
+        <p>Providing care, companionship, and assistance to elderly people in need</p>
+        <a href="#services" class="cta-button">Learn More</a>
+        
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-boxes">
+            <div class="service-box">
+                <img src="download.jpg" alt="Companionship" class="service-img">
+                <h3>Companionship</h3>
+                <p>Providing emotional and social support to elderly individuals.</p>
+            </div>
+            <div class="service-box">
+                <img src="physical.jpg" alt="Physical Assistance" class="service-img">
+                <h3>Physical Assistance</h3>
+                <p>Helping with daily tasks like cooking, cleaning, and personal care.</p>
+            </div>
+            <div class="service-box">
+                <img src="helper.jpg" alt="Health Monitoring" class="service-img">
+                <h3>Health Monitoring</h3>
+                <p>Ensuring the health and well-being of elderly individuals by tracking medications and appointments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <!-- <section id="testimonials" class="testimonials">
+        <h2>What People Say</h2>
+        <div class="testimonial-box">
+            <p>"CareBridge has been a lifesaver! The volunteers have truly made a difference in my mother's life." - Jane D.</p>
+        </div>
+        <div class="testimonial-box">
+            <p>"I can’t express how grateful I am for the help CareBridge has provided to my grandmother." - John S.</p>
+        </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <div class="ENDING">
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="cont">
+            <label for="name">Name <span class="required">*</span>:</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+        <!-- <input type="text" id="username" name="username" required> -->
+    <br>
+    <div class="cont">
+    <label for="email">Email Address <span class="required">*</span>:</label>
+    <input type="email" id="email" placeholder="Your Email" required>
+</div>
+    <br>
+            <!-- <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>-->
+            <textarea id="message" placeholder="Your Message" required></textarea>
+
+
+    
+
+    <form>
+        <label for="address">Enter Location:</label>
+        <input id="address" type="text" placeholder="Type your address">
+        <button type="button" onclick="searchLocation()">Search</button>
+
+        <div id="map"></div>
+
+        <label for="latitude">Latitude:</label>
+        <input id="latitude" type="text" readonly>
+
+        <label for="longitude">Longitude:</label>
+        <input id="longitude" type="text" readonly>
+
+        <button type="submit">Submit</button>
+    </form>
+            <!-- <button type="submit">Send Message</button>  -->
+        </form>
+        
+        
+    </section>
+    
+    <div id="INFO">
+        <h2>GET IN TOUCH</h2>
+        <div id="gmail">
+            <i class="fa-regular fa-envelope"></i>
+            <a href="mailto:your-shibhambangwalxd@gmail.com">shibhambangwalxd@gmail.com</a>
+        </div>
+
+        <a></a>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 CareBridge | All rights reserved</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
