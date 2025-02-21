@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="CareBridge provides professional companionship and elderly care services with flexible, reliable support for independent living."
+  />
+  <title>CareBridge - Companionship Services</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Pompei&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Font Awesome for Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    /* CSS Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background: #f4f7f6;
+      color: #333;
+    }
+
+    header,
+    footer,
+    main,
+    section {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 40px 0;
+      text-align: center;
+      background: #f4f4f4;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    h1,
+    h2 {
+      font-family: 'Pompei', serif;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    /* Companion Section */
+    .companion-section {
+      background: #ffffff;
+      padding: 50px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 50px;
+    }
+
+    .companion-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .companion-text {
+      flex: 1;
+      max-width: 600px;
+      padding: 20px;
+      font-size: 18px;
+      text-align: justify;
+      color: #34495e;
+    }
+
+    .companion-image {
+      flex: 0 0 340px;
+      padding: 20px;
+      background-color: #e6f4ea;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .companion-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Call-to-Action Button */
+    .cta-button {
+      display: inline-block;
+      background-color: #ff8c00;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .cta-button:hover {
+      background-color: #e67600;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      text-align: center;
+      padding: 50px 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 50px;
+    }
+
+    .contact-section a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-section i {
+      margin-right: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .companion-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .companion-text {
+        max-width: 100%;
+      }
+      .companion-image {
+        margin-top: 20px;
+        flex: 0 0 100%;
+      }
+      .cta-button {
+        width: 100%;
+        font-size: 1.5rem;
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CareBridge - Your Trusted Companion for Elderly Care</h1>
+    <p>Providing professional companionship services to support independent living.</p>
+  </header>
+
+  <main>
+    <section class="companion-section" id="services">
+      <div class="companion-content">
+        <div class="companion-text">
+          <h2>Companionship Services</h2>
+          <p>
+            At CareBridge, we offer reliable companionship services to seniors, ensuring they receive emotional, social, and physical support. Our trained companions help with daily tasks like cooking, cleaning, and personal care, while also providing enriching activities and fostering meaningful connections.
+          </p>
+          <p>
+            Whether you're looking for a few hours of assistance or long-term care, our companions are here to provide support and help your loved ones lead a happy, independent life.
+          </p>
+        </div>
+        <div class="companion-image">
+          <img src="companionship.jpg" alt="Companionship Care" />
+        </div>
+      </div>
+      <div style="text-align: center;">
+        <a href="#contact" class="cta-button">Learn More</a>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <h2>Get in Touch</h2>
+      <p>
+        <i class="fa-regular fa-envelope"></i>
+        <a href="mailto:shibhambangwalxd@gmail.com">shibhambangwalxd@gmail.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CareBridge | All rights reserved | <a href="#contact">Contact Us</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteer Profile</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      width: 100%;
+      padding: 20px 0;
+      background-color: #3a3f51;
+      text-align: center;
+    }
+    header h1 {
+      color: #fff;
+      font-size: 2rem;
+      margin: 0;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .profile-container {
+      background-color: #fff;
+      width: 100%;
+      max-width: 400px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #555;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      background-color: #f9f9f9;
+      transition: border-color 0.3s ease;
+    }
+    .form-group input:focus {
+      border-color: #ff8c00;
+      outline: none;
+    }
+    button {
+      background-color: #ff8c00;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #e67600;
+    }
+    #message {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: 600;
+      color: #333;
+    }
+    footer {
+      width: 100%;
+      padding: 15px 0;
+      background-color: #3a3f51;
+      text-align: center;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Add Your Profile (Volunteer)</h1>
+  </header>
+
+  <main>
+    <div class="profile-container">
+      <form id="volunteerForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" required placeholder="Enter your name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required placeholder="Enter your email" />
+        </div>
+        <div class="form-group">
+          <label for="skills">Skills</label>
+          <input type="text" id="skills" required placeholder="Enter your skills" />
+        </div>
+        <button type="submit">Join as Volunteer</button>
+      </form>
+      <p id="message"></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Organization | All rights reserved</p>
+  </footer>
+
+  <script>
+    document.getElementById("volunteerForm").addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      let volunteerData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        skills: document.getElementById("skills").value,
+      };
+
+      try {
+        let response = await fetch("http://localhost:5000/api/volunteers", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(volunteerData),
+        });
+
+        let result = await response.json();
+        document.getElementById("message").textContent = result.message;
+      } catch (error) {
+        document.getElementById("message").textContent = "Error: " + error.message;
+      }
+    });
+  </script>
+</body>
+</html>
